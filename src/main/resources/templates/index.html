@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>JPA Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <header th:replace="Layouts/layout :: header"></header>
+    <div class="container" style="padding-top: 20px; padding-bottom: 10px">
+        <h3> Ejemplo de JPA con Spring</h3>
+        <hr>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, blanditiis dolorem eaque error eveniet explicabo
+            iusto laboriosam libero natus nobis non porro quasi quisquam recusandae sed, sint soluta tempora vel.
+        </p>
+        <p>
+            Adipisci aliquid asperiores assumenda atque commodi, cum debitis dolore ducimus et facere, facilis fugit id illum
+            inventore laborum maiores molestiae mollitia odit perspiciatis quidem ratione, tempora ut vitae voluptatem voluptatibus?
+        </p>
+        <p>
+            A ad adipisci amet asperiores atque blanditiis distinctio doloribus eius eos esse expedita in, ipsa ipsam iure magnam
+            molestias natus nemo officiis placeat provident quaerat quisquam reiciendis rerum sapiente tempora?
+        </p>
+        <p>
+            Culpa laudantium neque quisquam rerum sed, totam! Ab aspernatur error illum odio porro! Asperiores dolorum error harum
+            incidunt inventore magnam neque officia quia, recusandae velit vero voluptatum. Magni pariatur, repellat?
+            Accusamus accusantium ad consectetur consequuntur cumque, ducimus enim error exercitationem explicabo fuga harum id impedit
+            inventore ipsam iste laudantium nesciunt nihil, nulla obcaecati perspiciatis possimus quaerat sapiente soluta tenetur vel.
+        </p>
+        <table class="table" style="padding-top: 20px">
+            <thead class="table-head">
+                <tr>
+                    <th> Nombre </th>
+                    <th> Apellido </th>
+                    <th> Correo </th>
+                    <th> Fecha </th>
+                    <th> Editar </th>
+                    <th> Eliminar </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each=" cliente: ${ clientes}">
+                    <td th:text="${cliente.nombre}"></td>
+                    <td th:text="${cliente.apellido}"></td>
+                    <td th:text="${cliente.email}"></td>
+                    <td th:text="${cliente.createdAt}"></td>
+                    <td> <a class="btn btn-outline-info btn-sm" th:href="@{/find/} + ${cliente.id}" th:text="'Editar'"></a></td>
+                    <td> <a class="btn btn-outline-danger btn-sm" th:href="@{/delete/} + ${cliente.id}" th:text="'Eliminar'"></a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <nav th:replace="layouts/pages-nav :: client-pages"></nav>
+
+        <a class="btn btn-success" th:href="@{/nuevo}"> Registrar Nuevo</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

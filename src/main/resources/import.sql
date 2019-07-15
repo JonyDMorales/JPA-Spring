@@ -1,0 +1,15 @@
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (1, 'Jony', 'D', 'jony@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (2, 'Moni1', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (3, 'Moni2', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (4, 'Moni3', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (5, 'Moni4', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (6, 'Moni5', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (7, 'Moni6', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (8, 'Moni7', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (9, 'Moni8', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (10, 'Moni9', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (11, 'Moni10', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (12, 'Moni11', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (13, 'Moni12', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (14, 'Moni13', 'D', 'moni@stratos.com', '2019-07-04');
+INSERT INTO clientes (id, nombre, apellido, email, created_at) VALUES (15, 'Moni14', 'D', 'moni@stratos.com', '2019-07-04');

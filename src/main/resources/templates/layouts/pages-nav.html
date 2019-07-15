@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<body>
+
+    <nav th:fragment="client-pages">
+
+        <ul class="pagination">
+            <li th:class="${page.first? 'page-item disabled' : 'page-item'}">
+                <span class="page-link" th:if="${page.first}"> &laquo; </span>
+                <a class="page-link" th:if="${not page.first}" th:href="@{${page.url}(page=0)}"> &laquo; </a>
+            </li>
+            <li th:class="${not page.hasPrevius? 'page-item disabled' : 'page-item'}">
+                <span class="page-link" th:if="${not page.hasPrevius}"> anterior </span>
+                <a class="page-link" th:if="${page.hasPrevius}" th:href="@{${page.url}(page=${page.pageActual - 2})}"> anterior </a>
+            </li>
+
+            <li th:each="item: ${page.pages}" th:class="${item.actual? 'page-item active' : 'page-item'}">
+                <span class="page-link" th:if="${item.actual}" th:text="${item.numItem}"></span>
+                <a  class="page-link" th:if="${not item.actual}" th:href="@{${page.url}(page=${item.numItem - 1})}" th:text="${item.numItem}"></a>
+            </li>
+
+            <li th:class="${not page.hasNext? 'page-item disabled' : 'page-item'}">
+                <span class="page-link" th:if="${not page.hasNext}"> siguiente </span>
+                <a class="page-link" th:if="${page.hasNext}" th:href="@{${page.url}(page=${page.pageActual})}"> siguiente </a>
+            </li>
+            <li th:class="${page.last? 'page-item disabled' : 'page-item'}">
+                <span class="page-link" th:if="${page.last}"> &raquo; </span>
+                <a class="page-link" th:if="${not page.last}" th:href="@{${page.url}(page=${page.totalPages -1})}"> &raquo; </a>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+</html>
